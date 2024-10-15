@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter Berkenbosch - Web Application Development Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js"
+      defer
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 font-sans leading-relaxed"
+    x-data="{ language: 'en' }"
+  >
+    <header class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-6 flex justify-between items-center"
+      >
+        <div>
+          <h1 class="text-4xl font-bold mb-2 text-blue-600">
+            Peter Berkenbosch
+          </h1>
+          <p
+            class="text-xl text-gray-600"
+            x-text="language === 'en' ? 'Web Application Development Professional' : 'Web Applicatie Ontwikkeling Professional'"
+          ></p>
+        </div>
+        <button
+          @click="language = language === 'en' ? 'nl' : 'en'"
+          class="btn btn-primary"
+        >
+          <span x-text="language === 'en' ? 'Nederlands' : 'English'"></span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="bg-blue-600 text-white">
+      <ul class="container mx-auto px-4 py-4 flex space-x-6 text-lg">
+        <li>
+          <a
+            href="#about"
+            class="hover:text-blue-200 transition duration-300"
+            x-text="language === 'en' ? 'About' : 'Over'"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#skills"
+            class="hover:text-blue-200 transition duration-300"
+            x-text="language === 'en' ? 'Skills' : 'Vaardigheden'"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#projects"
+            class="hover:text-blue-200 transition duration-300"
+            x-text="language === 'en' ? 'Projects' : 'Projecten'"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#clients"
+            class="hover:text-blue-200 transition duration-300"
+            x-text="language === 'en' ? 'Clients' : 'Klanten'"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="hover:text-blue-200 transition duration-300"
+            x-text="language === 'en' ? 'Contact' : 'Contact'"
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12 flex flex-col md:flex-row">
+      <div class="md:w-1/3 mb-8 md:mb-0">
+        <img
+          src="peter-berkenbosch-profile-shot.jpeg"
+          alt="Peter Berkenbosch"
+          class="w-full h-auto rounded-lg shadow-xl"
+        />
+      </div>
+      <div class="md:w-2/3 md:pl-12">
+        <section id="about" class="mb-16">
+          <h2
+            class="text-3xl font-semibold mb-6 text-blue-600"
+            x-text="language === 'en' ? 'About Me' : 'Over Mij'"
+          ></h2>
+          <p class="text-xl mb-4 leading-relaxed" x-show="language === 'en'">
+            Peter Berkenbosch is an experienced professional in web application
+            development, specializing in open-source e-commerce. He excels in
+            building bridges between clients, managers, and developers. With his
+            expertise as a Ruby on Rails Solution Architect, he offers valuable
+            insights as a (fractional) CTO. With over 20 years of experience,
+            Peter is able to assist organizations with technical strategy,
+            architecture, and optimization of their web applications.
+          </p>
+          <p class="text-xl mb-4 leading-relaxed" x-show="language === 'nl'">
+            Peter Berkenbosch is een ervaren professional op het gebied van web
+            applicatie ontwikkeling, gespecialiseerd in open source e-commerce.
+            Hij excelleert in het bouwen van bruggen tussen klanten,
+            leidinggevenden en ontwikkelaars. Met zijn expertise als Ruby on
+            Rails Solution Architect, biedt hij waardevolle inzichten als
+            (fractional) CTO. Met meer dan 20 jaar ervaring is Peter in staat om
+            organisaties te helpen met technische strategie, architectuur en het
+            optimaliseren van hun web applicaties.
+          </p>
+        </section>
+
+        <section id="skills" class="mb-16">
+          <h2
+            class="text-3xl font-semibold mb-6 text-blue-600"
+            x-text="language === 'en' ? 'Skills' : 'Vaardigheden'"
+          ></h2>
+          <ul class="grid grid-cols-2 gap-4 text-xl">
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 mr-2 text-green-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              Ruby on Rails
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 mr-2 text-green-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              Open-source e-commerce
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 mr-2 text-green-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              <span
+                x-text="language === 'en' ? 'Web Application Development' : 'Web Applicatie Ontwikkeling'"
+              ></span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 mr-2 text-green-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              <span
+                x-text="language === 'en' ? 'Technical Strategy' : 'Technische Strategie'"
+              ></span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 mr-2 text-green-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              <span
+                x-text="language === 'en' ? 'Solution Architecture' : 'Solution Architectuur'"
+              ></span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 mr-2 text-green-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              <span
+                x-text="language === 'en' ? 'Team Leadership' : 'Team Leiderschap'"
+              ></span>
+            </li>
+          </ul>
+        </section>
+
+        <section id="projects" class="mb-16">
+          <h2
+            class="text-3xl font-semibold mb-6 text-blue-600"
+            x-text="language === 'en' ? 'Featured Projects' : 'Uitgelichte Projecten'"
+          ></h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h3
+                class="text-2xl font-semibold mb-3 text-blue-600"
+                x-text="language === 'en' ? 'E-commerce Platform' : 'E-commerce Platform'"
+              ></h3>
+              <p
+                class="text-lg"
+                x-text="language === 'en' ? 'Developed a scalable open-source e-commerce solution for a global retail client.' : 'Ontwikkelde een schaalbare open-source e-commerce oplossing voor een wereldwijde retailklant.'"
+              ></p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h3
+                class="text-2xl font-semibold mb-3 text-blue-600"
+                x-text="language === 'en' ? 'Technical Strategy Consulting' : 'Technische Strategie Consulting'"
+              ></h3>
+              <p
+                class="text-lg"
+                x-text="language === 'en' ? 'Provided CTO-level insights to optimize web application architecture for a fast-growing startup.' : 'Leverde CTO-niveau inzichten om de web applicatie architectuur te optimaliseren voor een snelgroeiende startup.'"
+              ></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="clients" class="mb-16">
+          <h2
+            class="text-3xl font-semibold mb-6 text-blue-600"
+            x-text="language === 'en' ? 'Clients I\'ve Worked With' : 'Klanten waarmee ik heb gewerkt'"
+          ></h2>
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center"
+          >
+            <img
+              src="/api/placeholder/200/100"
+              alt="Glossier logo"
+              class="max-h-16 w-auto filter grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="/api/placeholder/200/100"
+              alt="MeUndies logo"
+              class="max-h-16 w-auto filter grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="/api/placeholder/200/100"
+              alt="DeseretBook logo"
+              class="max-h-16 w-auto filter grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="/api/placeholder/200/100"
+              alt="Solidus logo"
+              class="max-h-16 w-auto filter grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="/api/placeholder/200/100"
+              alt="Spree Commerce logo"
+              class="max-h-16 w-auto filter grayscale hover:grayscale-0 transition duration-300"
+            />
+          </div>
+        </section>
+
+        <section id="contact" class="mb-16">
+          <h2
+            class="text-3xl font-semibold mb-6 text-blue-600"
+            x-text="language === 'en' ? 'Get in Touch' : 'Neem Contact Op'"
+          ></h2>
+          <p
+            class="text-xl mb-6"
+            x-text="language === 'en' ? 'Interested in working together? Feel free to reach out!' : 'Geïnteresseerd in samenwerken? Neem gerust contact op!'"
+          ></p>
+          <ul class="text-xl space-y-4">
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 mr-3 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+              <a
+                href="mailto:peter@example.com"
+                class="text-blue-600 hover:underline"
+                >peter@example.com</a
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 mr-3 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                ></path>
+              </svg>
+              <a
+                href="https://www.linkedin.com/in/peterberkenbosch"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+                >linkedin.com/in/peterberkenbosch</a
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 mr-3 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                ></path>
+              </svg>
+              <a
+                href="https://twitter.com/peterberkenbosch"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+                >@peterberkenbosch</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+      <p class="text-lg">
+        &copy; 2024 Peter Berkenbosch.
+        <span
+          x-text="language === 'en' ? 'All rights reserved.' : 'Alle rechten voorbehouden.'"
+        ></span>
+      </p>
+    </footer>
+  </body>
+</html>
